@@ -18,3 +18,13 @@ Im Microsoft-Learn-Pfad habe ich das Modul «Einführung in Git» abgeschlossen 
 Dabei habe ich die drei Zustände einer Änderung unterschieden: Im Arbeitsverzeichnis nehme ich die Änderung vor, im Staging-Bereich wird sie für den nächsten Commit vorgemerkt, und im Repository ist sie dauerhaft gespeichert. Im GitHub-Flow ordne ich die Elemente so ein: Das Repository enthält das Projekt, ein Branch ist eine eigene Arbeitslinie, ein Commit hält einen Stand fest, ein Issue beschreibt eine Aufgabe oder ein Problem, und ein Pull Request schlägt vor, die Änderungen aus einem Branch zu übernehmen. Der Ablauf ist also: Issue erfassen, Branch erstellen, Änderungen committen, Pull Request eröffnen und nach der Prüfung zusammenführen.
 
 Ich habe gelernt, dass zwischen git und Git Hub echt einen unterschied gibt. Unklar oder schwierig war das am anfang zu verstehen aber am Schluss binich trotzdem herausgekommen. 
+
+
+## 14.09.2026
+In dieser Lernsession habe ich den begonnenen Microsoft-Learn-Baustein zu GitHub abgeschlossen und den GitHub-Flow in der geführten Übung angewendet. Dabei habe ich ein Issue erfasst, einen Branch erstellt, Änderungen committet und einen Pull Request eröffnet. Die Aufgabe jedes Schritts kann ich erklären: Das Issue beschreibt, was zu tun ist, der Branch trennt meine Arbeit vom Hauptstand, der Commit hält die Änderung fest, und der Pull Request schlägt vor, sie zu übernehmen. Mein Lernfortschritt war anhand der Modulbewertung überprüfbar, da ich alles gemacht habe, was verlangt war.
+
+Danach habe ich das Modul zur Kommunikation mit Markdown bearbeitet. Ich habe Überschriften, Listen, Links, Bilder und Codeblöcke eingesetzt und daraus ein Portfolio-README aufgebaut, in dem ich meinen ersten Lernnachweis strukturiert festgehalten habe. Die Änderung habe ich mit der Commit-Nachricht dokumentiert.
+
+Anschliessend habe ich mein Ergebnis anhand einfacher Qualitätskriterien geprüft. Beim SelbstCheck ist mir aufgefallen, dass ich zuwenig Fragen beantwortet habe und es noch viel zu tun gab, und ich habe das verbessert. Am Ende liegt ein verständlich dokumentierter Repository-Stand vor, den ich für mein ePortfolio weiterverwenden kann.
+
+Ich habe gelernt, wie man mit MD umgehen muss.
