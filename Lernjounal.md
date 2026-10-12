@@ -28,3 +28,41 @@ Danach habe ich das Modul zur Kommunikation mit Markdown bearbeitet. Ich habe Ü
 Anschliessend habe ich mein Ergebnis anhand einfacher Qualitätskriterien geprüft. Beim SelbstCheck ist mir aufgefallen, dass ich zuwenig Fragen beantwortet habe und es noch viel zu tun gab, und ich habe das verbessert. Am Ende liegt ein verständlich dokumentierter Repository-Stand vor, den ich für mein ePortfolio weiterverwenden kann.
 
 Ich habe gelernt, wie man mit MD umgehen muss.
+
+## 12.10.2026
+1. Worum ging es heute?
+
+Wir haben einen Praxisfall bearbeitet: In der Mensa kaufen Lernende Getränke und Snacks. Die verantwortliche Person rechnet den Gesamtpreis von Hand aus, und besonders bei mehreren gleichen Artikeln passieren Rechenfehler. Für die erste Version haben wir den Fall bewusst klein gehalten: genau ein Artikel pro Einkauf (Artikelname, Einzelpreis, Menge).
+
+Das Ziel der Session war, den Weg vom Problem zur Lösung zu üben, noch ohne Programmcode.
+
+2. Was habe ich gelernt?
+
+Problem, Ziel und Lösung sind drei verschiedene Dinge.
+
+Problem: Was läuft heute schief? («Beim manuellen Berechnen entstehen Fehler.»)
+Ziel: Wie sieht der gewünschte Zustand aus? («Der Gesamtpreis wird zuverlässig bestimmt.»)
+Lösung: Mit welchem Mittel erreichen wir das? («C#-Konsolenanwendung», «Console.ReadLine()».)
+
+Aussagen wie «Einzelpreis und Menge müssen berücksichtigt werden» passen in keine der drei Kategorien sauber. Sie sind Anforderungen: Sie sagen, was die Lösung leisten muss, aber nicht, wie sie gebaut wird.
+
+Ein Problemstatement muss lösungsneutral sein. Sobald ich Technik nenne (z.B. C#), schliesse ich andere Lösungen aus, bevor ich überhaupt verstanden habe, was gebraucht wird.
+
+Anforderungen brauchen Akzeptanzkriterien. Ein gutes Kriterium ist so konkret, dass eine fremde Person eindeutig sagen kann: erfüllt oder nicht erfüllt. Beispiel: «Bei 2.50 CHF und Menge 3 ist das Ergebnis genau CHF 7.50.» Unklare Formulierungen wie «funktioniert gut» sind dafür unbrauchbar.
+
+Das EVA-Modell gliedert ein Programm.
+
+Eingabe	Verarbeitung	Ausgabe
+Artikelname, Einzelpreis, Menge	Gesamtpreis = Einzelpreis × Menge	Zusammenfassung mit Gesamtpreis
+
+Ein Trockenlauf prüft den Ablauf, bevor ich programmiere. Ich spiele den Ablauf mit konkreten Werten von Hand durch und notiere Eingaben, Zwischenergebnisse und erwartete Ausgabe:
+
+Test	Artikel	Einzelpreis	Menge	Erwartete Ausgabe
+A	Apfelschorle	CHF 2.50	3	CHF 7.50
+B	Sandwich	CHF 5.80	2	CHF 11.60
+3. Was habe ich konkret gemacht?
+Sieben Aussagen den Kategorien Problem, Ziel und Lösung zugeordnet und mindestens drei Entscheidungen begründet. Dabei habe ich markiert, welche Aussagen nicht sauber passen.
+Ein lösungsneutrales Problemstatement und ein überprüfbares Zielbild formuliert.
+Vier funktionale Anforderungen abgeleitet (Eingaben erfassen, Gesamtpreis berechnen, Preis in CHF mit zwei Nachkommastellen anzeigen, verständliche Zusammenfassung ausgeben), jeweils mit Akzeptanzkriterium.
+Das EVA-Modell erstellt und den linearen Ablauf beschrieben (Start → Eingabe → Verarbeitung → Ausgabe → Ende).
+Beide Trockenläufe Schritt für Schritt durchgeführt und mit einer Kontrollrechnung von Hand überprüft (2.50 × 3 = 7.50 und 5.80 × 2 = 11.60).
