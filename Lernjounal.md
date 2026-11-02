@@ -66,3 +66,63 @@ Ein lösungsneutrales Problemstatement und ein überprüfbares Zielbild formulie
 Vier funktionale Anforderungen abgeleitet (Eingaben erfassen, Gesamtpreis berechnen, Preis in CHF mit zwei Nachkommastellen anzeigen, verständliche Zusammenfassung ausgeben), jeweils mit Akzeptanzkriterium.
 Das EVA-Modell erstellt und den linearen Ablauf beschrieben (Start → Eingabe → Verarbeitung → Ausgabe → Ende).
 Beide Trockenläufe Schritt für Schritt durchgeführt und mit einer Kontrollrechnung von Hand überprüft (2.50 × 3 = 7.50 und 5.80 × 2 = 11.60).
+
+## 02.11.2026
+
+### 1. Worum ging es heute?
+
+In LS4 habe ich den Mensa-Praxisfall als Modell beschrieben (EVA und Ablaufmodell). In LS5 habe ich dieses Modell in eine einfache **C#-Konsolenanwendung** übertragen. Das Programm fragt Artikelname, Einzelpreis und Menge ab, berechnet den Gesamtpreis und gibt eine verständliche Zusammenfassung aus. Der Ablauf ist **linear**: Es gibt noch keine Entscheidungen und keine Wiederholungen.
+
+Die Session habe ich heute abgeschlossen.
+
+### 2. Was habe ich gelernt?
+
+**Der Code folgt dem Modell.** Ich schreibe den Code nicht frei drauflos, sondern leite ihn aus dem EVA-Modell bzw. dem PAP ab. Jeder Schritt im Modell entspricht einer Stelle im Code:
+
+| EVA-Schritt | Im Programm |
+|---|---|
+| **Eingabe** | Artikelname, Einzelpreis und Menge über die Konsole einlesen |
+| **Verarbeitung** | Gesamtpreis = Einzelpreis × Menge berechnen |
+| **Ausgabe** | Zusammenfassung mit Gesamtpreis auf der Konsole anzeigen |
+
+**Datentypen müssen zum Wert passen.**
+
+| Wert | Datentyp | Warum |
+|---|---|---|
+| Artikelname | `string` | Text |
+| Menge | `int` | nur ganze Stück |
+| Einzelpreis, Gesamtpreis | `decimal` | Geldbetrag mit Nachkommastellen, rechnet im Dezimalsystem genau |
+
+**Eingaben kommen als Text an.** Was ich über die Konsole einlese, ist zuerst immer Text. Zahlen müssen in einen Zahlentyp umgewandelt werden, bevor ich damit rechnen kann.
+
+**Testen mit SOLL und IST.** Vor jedem Test lege ich das erwartete Ergebnis (SOLL) fest und vergleiche es danach mit dem tatsächlichen Ergebnis (IST). So erkenne ich Fehler im Programm und nicht erst im Kopf.
+
+**Erst testen, dann committen.** Ein Commit kommt erst nach bestandenen Pflichttests. Die Commit-Nachricht beschreibt konkret, welcher funktionsfähige Stand gespeichert wird (nicht nur «fertig» oder «update»).
+
+### 3. Was habe ich konkret gemacht?
+
+1. **Repetition:** Mit meinem Partner besprochen, welche Schritte zu Eingabe, Verarbeitung und Ausgabe gehören.
+2. **Modell:** Den Ablauf als PAP skizziert.
+3. **Umsetzung:** Den Ablauf in C# implementiert.
+4. **Testen:** Die Pflichttests mit SOLL und IST durchgeführt (siehe unten).
+5. **Rückbezug:** Im Code je eine Stelle für Eingabe, Verarbeitung und Ausgabe markiert.
+6. **Abschluss:** An drei Codestellen gezeigt, welcher Schritt des EVA-Modells umgesetzt wird, und erst nach den bestandenen Pflichttests committet.
+
+#### Pflichttests (SOLL)
+
+| Artikel | Preis | Menge | SOLL |
+|---|---|---|---|
+| Apfelschorle | 2.50 | 3 | CHF 7.50 |
+| Sandwich | 5.80 | 2 | CHF 11.60 |
+
+### 4. Was nehme ich mit?
+
+- Ein gutes Modell (EVA und PAP) macht den Code einfacher, weil ich ihn Schritt für Schritt daraus ableiten kann.
+- Die Trockenläufe aus LS4 haben mir die SOLL-Werte schon geliefert. Ich musste im Test nur noch vergleichen.
+- Für Geldbeträge verwende ich `decimal`, damit nichts durch Rundung verfälscht wird.
+- Ich committe erst, wenn die Pflichttests bestanden sind, und beschreibe in der Nachricht, was jetzt funktioniert.
+
+### 5. Nächster Schritt
+
+Das Programm erweitern, zum Beispiel mit Entscheidungen (ungültige Eingaben abfangen) und Wiederholungen (mehrere Artikel pro Einkauf).
+
