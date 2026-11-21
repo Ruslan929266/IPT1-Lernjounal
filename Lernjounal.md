@@ -126,3 +126,9 @@ Die Session habe ich heute abgeschlossen.
 
 Das Programm erweitern, zum Beispiel mit Entscheidungen (ungültige Eingaben abfangen) und Wiederholungen (mehrere Artikel pro Einkauf).
 
+Heute habe ich meine Mensa-Kasse aus LS5 um Mengenrabatte erweitert. Zuerst habe ich die Regeln (1–2 Stück 0 %, 3–4 Stück 10 %, ab 5 Stück 20 %) in eine Entscheidungstabelle geschrieben und die erwarteten Endtotale für CHF 2.50 ausgerechnet. Danach habe ich den PAP mit Rauten ergänzt und die Entscheidungen in C# mit if, else if und else umgesetzt. Bei Menge unter 1 gibt das Programm eine Fehlermeldung aus und beendet sich. Zum Schluss habe ich die Grenzwerte 1 bis 5, Menge 6 und Menge 0 getestet, Soll und Ist verglichen und die Arbeit mit einem Git-Commit gesichert.
+
+Ich habe gelernt, dass ein Programm die Bedingungen von oben nach unten prüft und die erste zutreffende gewinnt. Deshalb muss die grösste Grenze zuerst kommen: Menge 5 bekommt 20 %, weil «mindestens 5» zuerst geprüft wird. Würde zuerst «mindestens 3» stehen, bekäme sie nur 10 %. Geldbeträge rechne ich mit decimal und zeige sie mit ToString("F2") an.
+
+Offen ist noch, was passiert, wenn jemand «drei» statt «3» tippt: Das Programm stürzt ab. In LS7 kann ich das mit int.TryParse und einer Schleife lösen.
+
